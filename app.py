@@ -29,9 +29,12 @@ def input_image_details(uploaded_file):
         raise FileNotFoundError("No file uploaded.")
 
 
-st.set_page_config(page_title='MultiLanguage Invoice Extractor')
-st.header("MultiLanguage Invoice Extractor")
+st.set_page_config(page_title='MultiLanguage Invoice Extractor 📝')
+st.header("MultiLanguage Invoice Extractor 📝")
 input=st.text_input("Input Prompt: ",key='input')
+
+generate=st.button("Submit")
+
 uploaded_file=st.file_uploader("Upload an image of invoice: ",type=["jpg","jpeg","png"])
 image=" "
 if uploaded_file is not None:
@@ -43,9 +46,15 @@ submit=st.button("Tell me about the invoice")
 input_prompt="""
 You are an expert in understanding invoices.we will upload an image of invoice
 and you will be asked any question regarding the details that the invoice contain,
-you have to answer those questions. """
+you have to answer those questions in english language . """
 
 if submit:
+    image_data= input_image_details(uploaded_file)
+    response=get_gemini_response(input_prompt,image_data,input)
+    st.subheader("The response is: ")
+    st.write(response)
+
+if generate:
     image_data= input_image_details(uploaded_file)
     response=get_gemini_response(input_prompt,image_data,input)
     st.subheader("The response is: ")
