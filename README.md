@@ -19,6 +19,6 @@ This project is a multi-language invoice extractor that processes an invoice ima
 
 ## Usage:
 * Clone the repository: https://github.com/09Kanika/Invoice_extractor_using_Gemini_pro.git
-* Install dependencies: pip install -r requirements.txt
+* Install dependencies: `pip install -r requirements.txt`
 
 
