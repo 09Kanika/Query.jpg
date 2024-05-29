@@ -46,7 +46,7 @@ submit=st.button("Tell me about the invoice")
 input_prompt="""
 You are an expert in understanding invoices.we will upload an image of invoice
 and you will be asked any question regarding the details that the invoice contain,
-you have to answer those questions in english language . """
+you have to answer those questions. """
 
 if submit:
     image_data= input_image_details(uploaded_file)
