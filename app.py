@@ -29,23 +29,23 @@ def input_image_details(uploaded_file):
         raise FileNotFoundError("No file uploaded.")
 
 
-st.set_page_config(page_title='MultiLanguage Invoice Extractor 📝')
-st.header("MultiLanguage Invoice Extractor 📝")
-input=st.text_input("Input Prompt: ",key='input')
+st.set_page_config(page_title='Visionary AI Assistant')
+st.header("Visionary AI Assistant")
 
-generate=st.button("Submit")
-
-uploaded_file=st.file_uploader("Upload an image of invoice: ",type=["jpg","jpeg","png"])
+uploaded_file=st.file_uploader("Upload an image : ",type=["jpg","jpeg","png"])
 image=" "
 if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image, caption="Uplaoded Image.", use_column_width=True)
 
-submit=st.button("Tell me about the invoice")
+input=st.text_input("Input Prompt: ",key='input')
+
+
+submit=st.button("Tell me about the image")
 
 input_prompt="""
-You are an expert in understanding invoices.we will upload an image of invoice
-and you will be asked any question regarding the details that the invoice contain,
+You are an expert in understanding every type of image .we will upload an image of anything 
+and you will be asked any question regarding the details that the image contain,
 you have to answer those questions. """
 
 if submit:
@@ -54,8 +54,3 @@ if submit:
     st.subheader("The response is: ")
     st.write(response)
 
-if generate:
-    image_data= input_image_details(uploaded_file)
-    response=get_gemini_response(input_prompt,image_data,input)
-    st.subheader("The response is: ")
-    st.write(response)
