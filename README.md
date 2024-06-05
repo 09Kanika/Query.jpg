@@ -1,5 +1,5 @@
-# Multi language invoice extractor using Gemini Pro Vision.
-This project is a multi-language invoice extractor that processes an invoice image as input and answers questions based on the extracted information. Utilizing the power of Google Gemini Pro Vision, the application ensures accurate and efficient extraction of key invoice details across various languages. The user interface is built with Streamlit, providing an intuitive and interactive experience.
+# Visionary Ai assistant using Gemini Pro Vision.
+This project processes any type of image, be it a document, letter, a random picture captured by your camera, or anything as input and answers questions based on the extracted information. Utilizing the power of Google Gemini Pro Vision, the application ensures accurate and efficient extraction of key details. The user interface is built with Streamlit, providing an intuitive and interactive experience.
 
 ## What is Google Gemini?
 * Google Gemini is a suite of generative AI models developed by Google. 
@@ -7,7 +7,7 @@ This project is a multi-language invoice extractor that processes an invoice ima
 * This includes the ability to accurately interpret and extract information from images, making it an ideal choice for invoice extraction tasks
 
 ## Features:
-* Multi-Language Support: Extracts data from invoices written in various languages.
+* Multi-Language Support: Extracts data from documents written in various languages.
 * Accurate Information Extraction: Utilizes Google Gemini Pro Vision for precise data retrieval.
 * Interactive UI: Built with Streamlit for a user-friendly experience.
 * Question-Answer Interface: Simply ask questions about the invoice and get instant answers.
