@@ -1,14 +1,14 @@
 from dotenv import load_dotenv
-load_dotenv() ## load environment variables from .env
 import streamlit as st
 import os
+from langchain_groq import ChatGroq
 from PIL import Image
 import google.generativeai as genai
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+load_dotenv()
 
-##load gemini pro
-model=genai.GenerativeModel('gemini-pro-vision')
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+model=genai.GenerativeModel('gemini-pro-vision'))
 
 def get_gemini_response(input,image,prompt):
     response=model.generate_content([input,image[0],prompt])
@@ -33,14 +33,12 @@ st.set_page_config(page_title='Visionary AI Assistant')
 st.header("Visionary AI Assistant")
 
 uploaded_file=st.file_uploader("Upload an image : ",type=["jpg","jpeg","png"])
-image=" "
+
 if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image, caption="Uplaoded Image.", use_column_width=True)
 
 input=st.text_input("Input Prompt: ",key='input')
-
-
 submit=st.button("Tell me about the image")
 
 input_prompt="""
@@ -53,4 +51,3 @@ if submit:
     response=get_gemini_response(input_prompt,image_data,input)
     st.subheader("The response is: ")
     st.write(response)
-
