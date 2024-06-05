@@ -8,7 +8,7 @@ import google.generativeai as genai
 load_dotenv()
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model=genai.GenerativeModel('gemini-pro-vision'))
+model=genai.GenerativeModel('gemini-pro-vision')
 
 def get_gemini_response(input,image,prompt):
     response=model.generate_content([input,image[0],prompt])
@@ -38,8 +38,8 @@ if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image, caption="Uplaoded Image.", use_column_width=True)
 
-input=st.text_input("Input Prompt: ",key='input')
-submit=st.button("Tell me about the image")
+input=st.text_input("What do you like to know: ",key='input')
+submit=st.button("Submit")
 
 input_prompt="""
 You are an expert in understanding every type of image .we will upload an image of anything 
