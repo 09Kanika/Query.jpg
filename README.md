@@ -12,16 +12,6 @@ This project processes any type of image, be it a document, letter, a random pic
 * Interactive UI: Built with Streamlit for a user-friendly experience.
 * Question-Answer Interface: Simply ask questions about the invoice and get instant answers.
 
-  ![Screenshot 2024-06-05 234803](https://github.com/09Kanika/Visionary-AI-assistant/assets/123890504/e53be6c7-c41e-4f33-a0f1-7c00db2195ee)
-* Upload any picture and ask question:
-  
-  ![Screenshot 2024-06-05 234827](https://github.com/09Kanika/Visionary-AI-assistant/assets/123890504/f25510e6-fe8c-42d0-a889-5268ab3f7031)
-  ![Screenshot 2024-06-05 234856](https://github.com/09Kanika/Visionary-AI-assistant/assets/123890504/10802ccd-6b34-40dd-b8ad-33bcd63645f6)
-
-* It can also read text from the image:
-  ![Screenshot 2024-06-05 235309](https://github.com/09Kanika/Visionary-AI-assistant/assets/123890504/8f0ce979-8444-4982-8c39-c750e47bb0ec)
-  ![Screenshot 2024-06-05 235333](https://github.com/09Kanika/Visionary-AI-assistant/assets/123890504/b8142403-1322-4fd7-84a8-4404d486ebc8)
-
 
 
 ## Tools:
