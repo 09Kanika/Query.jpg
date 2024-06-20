@@ -29,8 +29,8 @@ def input_image_details(uploaded_file):
         raise FileNotFoundError("No file uploaded.")
 
 
-st.set_page_config(page_title='Visionary AI Assistant')
-st.header("Visionary AI Assistant")
+st.set_page_config(page_title='Query.jpg')
+st.header("Query.jpg 🖼️🔍")
 
 uploaded_file=st.file_uploader("Upload an image : ",type=["jpg","jpeg","png"])
 
@@ -38,7 +38,7 @@ if uploaded_file is not None:
     image=Image.open(uploaded_file)
     st.image(image, caption="Uplaoded Image.", use_column_width=True)
 
-input=st.text_input("What do you like to know: ",key='input')
+input=st.text_input("What would you like to know about the image: ",key='input')
 submit=st.button("Submit")
 
 input_prompt="""
@@ -49,5 +49,4 @@ you have to answer those questions. """
 if submit:
     image_data= input_image_details(uploaded_file)
     response=get_gemini_response(input_prompt,image_data,input)
-    st.subheader("The response is: ")
     st.write(response)
