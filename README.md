@@ -13,9 +13,9 @@ This project processes any type of image - be it a document, letter, a random pi
 * Question-Answer Interface: Simply ask questions about the invoice and get instant answers.
 
 ## Tools:
-* Google Gemini Pro Vision: An advanced AI model for interpreting and extracting information from images, particularly suited for complex and multi-language documents.
-* python-dotenv: A Python library for reading environment variables from a .env file. This is useful for managing configuration settings and sensitive information like API keys.
-* Pillow: A Python Imaging Library (PIL) fork, which adds image processing capabilities to the application, such as reading and converting image formats.
+* Google Gemini Pro Vision:An advanced AI model for interpreting and extracting information from images, particularly suited for complex and multi-language documents.
+* python-dotenv:A Python library for reading environment variables from a .env file. This is useful for managing configuration settings and sensitive information like API keys.
+* Pillow:A Python Imaging Library (PIL) fork, which adds image processing capabilities to the application, such as reading and converting image formats.
 
 ## Usage:
 * Clone the repository:
